@@ -1,40 +1,76 @@
 package ec.ups.edu.poo.clases;
 
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
 public class Institucion {
-    private String identificacion;
-    private GregorianCalendar fechaDeInicio;
-    private List<Persona> personas;
+    private int identificacion;
+    private String nombre;
+    private List<String> sedes;
+    private Direccion direccion;
+    private List<Asignacion> asignaciones;
 
-    public GregorianCalendar getFechaDeInicio() {
-        return fechaDeInicio;
+    public Institucion() {
+        asignaciones = new ArrayList<>();
     }
 
-    public void setFechaDeInicio(GregorianCalendar fechaDeInicio) {
-        this.fechaDeInicio = fechaDeInicio;
+    public Institucion(int identificacion, String nombre, List<String> sedes, Direccion direccion, List<Asignacion> asignaciones) {
+        this.identificacion = identificacion;
+        this.nombre = nombre;
+        this.sedes = sedes;
+        this.direccion = direccion;
+        this.asignaciones = new ArrayList<>();
     }
 
-    public String getIdentificacion() {
+    public int getIdentificacion() {
         return identificacion;
     }
 
-    public void setIdentificacion(String identificacion) {
+    public void setIdentificacion(int identificacion) {
         this.identificacion = identificacion;
     }
 
-    public List<Persona> getPersonas() {
-        return personas;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setPersonas(List<Persona> personas) {
-        this.personas = personas;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public List<String> getSedes() {
+        return sedes;
+    }
+
+    public void setSedes(List<String> sedes) {
+        this.sedes = sedes;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
+    public void addAsignacion(Asignacion asignacion){
+        asignaciones.add(asignacion);
+    }
+
+    public List<Asignacion> getAsignaciones() {
+        return asignaciones;
     }
 
     @Override
-    public String toString(){
-        return "\nIdentificación: " + identificacion +
-                "\nFecha de inicio: " + fechaDeInicio;
+    public String toString() {
+        return "Institucion{" +
+                "identificacion=" + identificacion +
+                ", nombre='" + nombre + '\'' +
+                ", sedes=" + sedes +
+                ", direccion=" + direccion +
+                ", asignaciones=" + asignaciones +
+                '}';
     }
 }

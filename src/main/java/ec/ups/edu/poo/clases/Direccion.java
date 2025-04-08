@@ -1,9 +1,11 @@
 package ec.ups.edu.poo.clases;
 
+import ec.ups.edu.poo.enums.TipoDireccion;
+
 import java.util.List;
 
 public class Direccion {
-    private String tipo;
+    private TipoDireccion tipo;
     private String numero;
     private String callePrincipal;
     private String calleSecundaria;
@@ -12,11 +14,26 @@ public class Direccion {
     private String pais;
     private List<Persona> personas;
 
-    public String getTipo() {
+    public Direccion() {
+    }
+
+    public Direccion(TipoDireccion tipo, String numero, String callePrincipal, String calleSecundaria,
+                     String ciudad, String provincia, String pais, List<Persona> personas) {
+        this.tipo = tipo;
+        this.numero = numero;
+        this.callePrincipal = callePrincipal;
+        this.calleSecundaria = calleSecundaria;
+        this.ciudad = ciudad;
+        this.provincia = provincia;
+        this.pais = pais;
+        this.personas = personas;
+    }
+
+    public TipoDireccion getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoDireccion tipo) {
         this.tipo = tipo;
     }
 
@@ -66,14 +83,6 @@ public class Direccion {
 
     public void setPais(String pais) {
         this.pais = pais;
-    }
-
-    public List<Persona> getPersonas() {
-        return personas;
-    }
-
-    public void setPersonas(List<Persona> personas) {
-        this.personas = personas;
     }
 
     @Override
