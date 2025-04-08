@@ -11,22 +11,23 @@ public class Persona {
     private String celular;
     private String email;
     private List<Direccion> direcciones;
-    private List<Institucion> instituciones;
 
+    //Constructores
     public Persona(){
         direcciones = new ArrayList<>();
     }
 
     public Persona(String cedula, String nombre, String apellido, String celular,
-                   String email, List<Institucion> instituciones) {
+                   String email) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.celular = celular;
         this.email = email;
         this.direcciones = new ArrayList<>();
-        this.instituciones = instituciones;
     }
+
+    //Getter y setter
 
     public String getCedula() {
         return cedula;

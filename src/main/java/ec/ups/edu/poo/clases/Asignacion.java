@@ -9,6 +9,7 @@ public class Asignacion {
     private Rol rol;
     private GregorianCalendar fechaDeInicio;
 
+    //Constructor
     public Asignacion() {
     }
 
@@ -18,6 +19,7 @@ public class Asignacion {
         this.fechaDeInicio = fechaDeInicio;
     }
 
+    //Getter y setter
     public Persona getPersona() {
         return persona;
     }

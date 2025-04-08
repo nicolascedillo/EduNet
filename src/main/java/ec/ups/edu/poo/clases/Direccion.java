@@ -6,29 +6,29 @@ import java.util.List;
 
 public class Direccion {
     private TipoDireccion tipo;
-    private String numero;
+    private String numeracion;
     private String callePrincipal;
     private String calleSecundaria;
     private String ciudad;
     private String provincia;
     private String pais;
-    private List<Persona> personas;
 
+    //Constructor
     public Direccion() {
     }
 
-    public Direccion(TipoDireccion tipo, String numero, String callePrincipal, String calleSecundaria,
-                     String ciudad, String provincia, String pais, List<Persona> personas) {
+    public Direccion(TipoDireccion tipo, String numeracion, String callePrincipal, String calleSecundaria,
+                     String ciudad, String provincia, String pais) {
         this.tipo = tipo;
-        this.numero = numero;
+        this.numeracion = numeracion;
         this.callePrincipal = callePrincipal;
         this.calleSecundaria = calleSecundaria;
         this.ciudad = ciudad;
         this.provincia = provincia;
         this.pais = pais;
-        this.personas = personas;
     }
 
+    //Getter y setter
     public TipoDireccion getTipo() {
         return tipo;
     }
@@ -37,12 +37,12 @@ public class Direccion {
         this.tipo = tipo;
     }
 
-    public String getNumero() {
-        return numero;
+    public String getNumeracion() {
+        return numeracion;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setNumeracion(String numeracion) {
+        this.numeracion = numeracion;
     }
 
     public String getCallePrincipal() {
@@ -88,7 +88,7 @@ public class Direccion {
     @Override
     public String toString(){
         return "\nTipo: " + tipo +
-                "\nNumero: " + numero +
+                "\nNumeración: " + numeracion +
                 "\nCalle principal: " + callePrincipal +
                 "\nCalle secundaria: " + calleSecundaria +
                 "\nCiudad: " + ciudad +

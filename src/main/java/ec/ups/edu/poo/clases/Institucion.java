@@ -11,6 +11,7 @@ public class Institucion {
     private Direccion direccion;
     private List<Asignacion> asignaciones;
 
+    //Constructores
     public Institucion() {
         asignaciones = new ArrayList<>();
     }
@@ -23,6 +24,7 @@ public class Institucion {
         this.asignaciones = new ArrayList<>();
     }
 
+    //Getter y setter
     public int getIdentificacion() {
         return identificacion;
     }
