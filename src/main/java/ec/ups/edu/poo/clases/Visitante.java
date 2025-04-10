@@ -1,4 +1,5 @@
 package ec.ups.edu.poo.clases;
+
 import java.util.GregorianCalendar;
 
 public class Visitante extends Persona{
@@ -37,8 +38,8 @@ public class Visitante extends Persona{
     @Override
     public String toString(){
         return super.toString() +
-                "\nMotivo: " + motivo +
-                "\nFecha de entrada: " + fechaDeEntrada +
-                "\nFecha de salida: " + fechaDeSalida;
+                "\n\t\tMotivo: " + motivo +
+                "\n\t\tFecha de entrada: " + fechaDeEntrada +
+                "\n\t\tFecha de salida: " + fechaDeSalida;
     }
 }

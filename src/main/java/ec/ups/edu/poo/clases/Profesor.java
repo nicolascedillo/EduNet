@@ -40,7 +40,7 @@ public class Profesor extends Persona{
     @Override
     public String toString(){
         return super.toString() +
-                "\nTítulos académicos: " + titulosAcademicos +
-                "\nAreas de especialización: " + areasDeEspecializacion;
+                "\n\t\tTítulos académicos: " + titulosAcademicos +
+                "\n\t\tAreas de especialización: " + areasDeEspecializacion;
     }
 }

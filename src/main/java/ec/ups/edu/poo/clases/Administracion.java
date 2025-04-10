@@ -37,7 +37,7 @@ public class Administracion extends Persona{
     @Override
     public String toString(){
         return super.toString() +
-                "\nCargos: " + cargos +
-                "\n Responsabilidades: " + listaDeResponsabilidades;
+                "\n\t\tCargos: " + cargos +
+                "\n\t\tResponsabilidades: " + listaDeResponsabilidades;
     }
 }

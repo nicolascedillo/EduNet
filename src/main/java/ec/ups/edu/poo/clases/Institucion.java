@@ -1,5 +1,7 @@
 package ec.ups.edu.poo.clases;
 
+import ec.ups.edu.poo.enums.TipoDireccion;
+
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -16,13 +18,14 @@ public class Institucion {
         asignaciones = new ArrayList<>();
     }
 
-    public Institucion(int identificacion, String nombre, List<String> sedes, Direccion direccion, List<Asignacion> asignaciones) {
+    public Institucion(int identificacion, String nombre, List<String> sedes, Direccion direccion) {
         this.identificacion = identificacion;
         this.nombre = nombre;
         this.sedes = sedes;
         this.direccion = direccion;
         this.asignaciones = new ArrayList<>();
     }
+
 
     //Getter y setter
     public int getIdentificacion() {
@@ -53,8 +56,8 @@ public class Institucion {
         return direccion;
     }
 
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
+    public void addDireccion(TipoDireccion tipoDireccion, String callePrincipal, String calleSecundaria, String numeracion, String ciudad, String provincia, String pais){
+        this.direccion = new Direccion(tipoDireccion, callePrincipal, calleSecundaria, numeracion, ciudad, provincia, pais);
     }
 
     public void addAsignacion(Asignacion asignacion){
@@ -68,11 +71,11 @@ public class Institucion {
     @Override
     public String toString() {
         return "Institucion{" +
-                "identificacion=" + identificacion +
-                ", nombre='" + nombre + '\'' +
-                ", sedes=" + sedes +
-                ", direccion=" + direccion +
-                ", asignaciones=" + asignaciones +
+                "\n\tidentificacion=" + identificacion +
+                ",\n\tnombre='" + nombre + '\'' +
+                ",\n\tsedes=" + sedes +
+                ",\n\tdireccion=" + direccion +
+                ",\n\tasignaciones=" + asignaciones +
                 '}';
     }
 }
